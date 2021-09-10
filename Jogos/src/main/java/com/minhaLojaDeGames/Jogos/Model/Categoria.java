@@ -15,6 +15,7 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
 @Entity
 @Table(name = "tb_categoria")
 public class Categoria {
@@ -33,25 +34,25 @@ public class Categoria {
 	private List<Produto> produto;
 	
 	
-	//gets and sets
-	public long getIdCategoria() {
+	//getters and setters
+	public Long getIdCategoria() {
 		return IdCategoria;
+	}
+
+	public void setIdCategoria(Long idCategoria) {
+		IdCategoria = idCategoria;
 	}
 
 	public String getPlataforma() {
 		return plataforma;
 	}
 
-	public List<Produto> getProduto() {
-		return produto;
-	}
-
-	public void setIdCategoria(Long IdCategoria) {
-		this.IdCategoria = IdCategoria;
-	}
-
 	public void setPlataforma(String plataforma) {
 		this.plataforma = plataforma;
+	}
+
+	public List<Produto> getProduto() {
+		return produto;
 	}
 
 	public void setProduto(List<Produto> produto) {
